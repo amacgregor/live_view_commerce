@@ -3,9 +3,10 @@
 <div class="flex mb-4"> 
     <%= for product <- row do %>
         <div class="w-1/4 bg-gray-500">
-        <img src="https://via.placeholder.com/300" />
-        <p><%= product.name %></p>
-        <p>$<%= product.price %></p>
+            <img src="https://via.placeholder.com/300" />
+            <p><%= product.name %></p>
+            <%= live_render(@socket, LiveViewCommerceWeb.ProductPriceLive, id: "price-" <> product.sku, session: %{price: product.price, id: "price-" <> product.sku}) %>
+            <%= link "Show", to: Routes.product_path(@socket, :show, product.id) %>
         </div>
     <% end %>
 </div>
