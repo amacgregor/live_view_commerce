@@ -1,0 +1,12 @@
+<!-- Four columns -->
+<%= for row <- @products do %>
+<div class="flex mb-4"> 
+    <%= for product <- row do %>
+        <div class="w-1/4 bg-gray-500">
+        <img src="https://via.placeholder.com/300" />
+        <p><%= product.name %></p>
+        <p>$<%= product.price %></p>
+        </div>
+    <% end %>
+</div>
+<% end %>
