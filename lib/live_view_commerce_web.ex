@@ -25,7 +25,6 @@ defmodule LiveViewCommerceWeb do
       import LiveViewCommerceWeb.Gettext
       alias LiveViewCommerceWeb.Router.Helpers, as: Routes
       import Phoenix.LiveView.Controller, only: [live_render: 3]
-
     end
   end
 
@@ -54,7 +53,6 @@ defmodule LiveViewCommerceWeb do
       import Plug.Conn
       import Phoenix.Controller
       import Phoenix.LiveView.Router
-
     end
   end
 

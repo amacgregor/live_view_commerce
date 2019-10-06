@@ -14,4 +14,11 @@ alias Faker.{Commerce, Lorem}
 
 skus = Faker.Util.sample_uniq(10, fn -> Faker.String.base64(8) end)
 
-Enum.each(skus, fn(sku) -> Catalog.create_product(%{sku: sku, name: Commerce.product_name(), price: Commerce.price, description: Lorem.sentence(5..15)}) end)
+Enum.each(skus, fn sku ->
+  Catalog.create_product(%{
+    sku: sku,
+    name: Commerce.product_name(),
+    price: Commerce.price(),
+    description: Lorem.sentence(5..15)
+  })
+end)

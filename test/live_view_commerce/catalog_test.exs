@@ -6,9 +6,30 @@ defmodule LiveViewCommerce.CatalogTest do
   describe "products" do
     alias LiveViewCommerce.Catalog.Product
 
-    @valid_attrs %{created_at: ~N[2010-04-17 14:00:00], description: "some description", name: "some name", price: 120.5, sku: "some sku", updated_at: ~N[2010-04-17 14:00:00]}
-    @update_attrs %{created_at: ~N[2011-05-18 15:01:01], description: "some updated description", name: "some updated name", price: 456.7, sku: "some updated sku", updated_at: ~N[2011-05-18 15:01:01]}
-    @invalid_attrs %{created_at: nil, description: nil, name: nil, price: nil, sku: nil, updated_at: nil}
+    @valid_attrs %{
+      created_at: ~N[2010-04-17 14:00:00],
+      description: "some description",
+      name: "some name",
+      price: 120.5,
+      sku: "some sku",
+      updated_at: ~N[2010-04-17 14:00:00]
+    }
+    @update_attrs %{
+      created_at: ~N[2011-05-18 15:01:01],
+      description: "some updated description",
+      name: "some updated name",
+      price: 456.7,
+      sku: "some updated sku",
+      updated_at: ~N[2011-05-18 15:01:01]
+    }
+    @invalid_attrs %{
+      created_at: nil,
+      description: nil,
+      name: nil,
+      price: nil,
+      sku: nil,
+      updated_at: nil
+    }
 
     def product_fixture(attrs \\ %{}) do
       {:ok, product} =

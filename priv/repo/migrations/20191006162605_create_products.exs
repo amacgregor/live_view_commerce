@@ -9,6 +9,5 @@ defmodule LiveViewCommerce.Repo.Migrations.CreateProducts do
       add :description, :text
       timestamps()
     end
-
   end
 end
