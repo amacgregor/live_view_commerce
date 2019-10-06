@@ -1,4 +1,13 @@
-/* This file is for your main application css. */
+/* app.css */
 
-@import "./phoenix.css";
-@import "../../deps/phoenix_live_view/assets/css/live_view.css";
+@tailwind base;
+
+@tailwind components;
+
+/* Put your custom components here */
+
+@tailwind utilities;
+
+/* Put your custom utilities here */
+
+/* @import "../../deps/phoenix_live_view/assets/css/live_view.css"; */
